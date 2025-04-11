@@ -1,0 +1,40 @@
+<div class="m-3">
+  <ag-grid-angular class="ag-theme-alpine" [rowData]="employees" [columnDefs]="columnDefs" [pagination]="true"
+    style="width: 75.2%; height: 500px">
+  </ag-grid-angular>
+</div>
+<!-- Bootstrap Modal -->
+<div class="modal fade" id="editEmployeeModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalLabel">Edit Employee</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input [(ngModel)]="selectedEmployee.name" name="name" class="form-control" />
+          </div>
+          <div class="mb-3">
+            <label for="position" class="form-label">Position</label>
+            <input [(ngModel)]="selectedEmployee.position" name="position" class="form-control" />
+          </div>
+          <div class="mb-3">
+            <label for="department" class="form-label">Department</label>
+            <input [(ngModel)]="selectedEmployee.department" name="department" class="form-control" />
+          </div>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" (click)="saveEmployee()">Save</button>
+      </div>
+
+    </div>
+  </div>
+</div>

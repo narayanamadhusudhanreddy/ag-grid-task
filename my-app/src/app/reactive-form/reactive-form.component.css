@@ -1,0 +1,13 @@
+.form-control {
+    border: 1px solid #343a40 !important;
+  }
+  .form-check-input{
+    border: 1px solid #343a40 !important;
+  }
+  .checkLabel{
+    margin-left: 8px;
+  }
+  .card{
+    border: 1px solid #343a40 !important;
+  }
+ 
